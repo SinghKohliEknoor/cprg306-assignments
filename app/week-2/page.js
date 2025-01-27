@@ -1,15 +1,10 @@
-import Title from "./title.js";
+import StudentInfo from "./student-info";
 
-export default function Page(){
-    let a = 5;
-    let b = 10;
-    return(
-        <main>
-            <Title /> 
-            <p>This is a simple web page</p>
-            <p>
-                The sum of {a} and {b} is {a+b}.
-            </p>
-        </main>
+export default function Page() {
+    return (
+      <main>
+        <h1>Shopping List</h1>
+        <StudentInfo/>
+      </main>
     );
-}
+  }
