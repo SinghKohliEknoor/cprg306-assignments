@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Dis from "./week-4/page";
+
 export default function page(){
   return(
     <div>

@@ -14,8 +14,8 @@ export default function Counter(){
     return(
         <div>
             <p>{count}</p>
-            <button onClick={increment}
-            className="p-2 m-2 bg-blue-700 hover:bg-blue-500">increment</button>
+            <button onClick={increment} type="button"
+            className="p-2 m-2 bg-blue-700 hover:bg-blue-500  active:bg-red-200 disabled:bg-gray-300"  disabled={count===10}>increment</button>
         </div>
     )
 }
