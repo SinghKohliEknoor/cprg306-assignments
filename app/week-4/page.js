@@ -1,7 +1,8 @@
-import Counter from "./counter";
+import NewItem from "./new-item";
+
 
 export default function Dis(){
     return(
-        <Counter />
+        <NewItem />
     )
 }

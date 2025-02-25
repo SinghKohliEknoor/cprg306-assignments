@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-export default function Counter(){
+export default function NewItem(){
     const [count,setCount] = useState(0);
 
     const increment = () => {
