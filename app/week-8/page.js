@@ -18,7 +18,7 @@ export default function Page() {
   }
 
   const handleItemSelect = (itemName) => {
-    const cleanedItemName = itemName.split(',')[0].trim().replace(/[\u{1F600}-\u{1F6FF}]/gu, '');
+    const cleanedItemName = itemName.replace(/,.*/g, '').replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '').trim();
     console.log("Selected Item:", cleanedItemName);
     setSelectedItemName(cleanedItemName);
 };
