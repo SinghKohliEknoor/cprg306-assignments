@@ -25,6 +25,9 @@ export default function page(){
       <p>
         Link to week 8: <Link href="week-8">Week 8</Link>
       </p>
+      <p>
+        Link to week 9: <Link href="week-9">Week 9</Link>
+      </p>
     </div>
   );
 }
