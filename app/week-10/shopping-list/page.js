@@ -12,19 +12,23 @@ export default function Page() {
   const [product, setProduct] = useState([]);
   const [selectedItemName, setSelectedItemName] = useState("");
 
-  // Fetch shopping list from Firestore when the component mounts
+  
   useEffect(() => {
-    const loadShoppingList = async () => {
-      const items = await fetchShoppingList();
-      setProduct(items);
-    };
-    loadShoppingList();
-  }, []);
+    if (user?.uid) {
+      const loadShoppingList = async () => {
+        const items = await fetchShoppingList(user.uid);
+        setProduct(items);
+      };
+      loadShoppingList();
+    }
+  }, [user?.uid]);
 
   // Function to handle adding a product
   const handleAddProduct = async (newProduct) => {
-    await addShoppingItem(newProduct);
-    setProduct([...product, newProduct]);  // Optimistic update
+    if (user?.uid) {
+      await addShoppingItem(user.uid, newProduct);
+      setProduct([...product, newProduct]); 
+    }
   };
 
   const handleItemSelect = (itemName) => {

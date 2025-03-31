@@ -9,7 +9,6 @@ export default function Page() {
   return (
     <div className="p-4 m-5 bg-gray-200 rounded-lg shadow-lg">
       <h1>Week 10</h1>
-      <p>First unsecured Landing Page</p>
       <p>Login Required to move further</p>
       <br/>
 
